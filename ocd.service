@@ -1,0 +1,18 @@
+[Unit]
+Description=OCD - Open Current Digest
+After=network.target
+
+[Service]
+StandardOutput=journal
+StandardError=journal
+Type=simple
+User=ubuntu
+WorkingDirectory=/opt/ocd
+EnvironmentFile=/opt/ocd/.env
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/usr/bin/python3 /opt/ocd/app.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

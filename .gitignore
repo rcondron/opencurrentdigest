@@ -1,0 +1,11 @@
+.env
+articles.db
+articles.db-journal
+articles.db-wal
+*.pyc
+__pycache__/
+*.bak
+*.bak2
+*.bak3
+app.log
+dump_schema.py
